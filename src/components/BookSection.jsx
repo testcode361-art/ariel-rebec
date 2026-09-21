@@ -30,6 +30,24 @@ function BookSection() {
       verified: false,
       text: 'I know the author personally and saw the drawings and read the book before it was published and to see the finish product is awe-inspiring! The illustrations are simply amazingly beautiful and I am so blessed to have seen this book idea and purpose come to reality. Many blessings to you Ms. Ariel Rebec :-) So, please you all support Ariel Rebec and her many endeavors. You won\'t be disappointed with this heart felt book!',
     },
+    {
+      name: 'Kindle Customer',
+      rating: 5,
+      title: 'I read it to my nieces who loved the story line',
+      date: 'Reviewed in the United States on January 28, 2017',
+      format: 'Kindle',
+      verified: false,
+      text: 'This story is well written and illustrated. I read it to my nieces who loved the story line! I love how the special needs of Jamie are incorporated into a fun story. It\'s a fun glimpse into an imaginative child\'s world. My nieces and I colored our own imaginary horses after we were done reading the story!!!',
+    },
+    {
+      name: 'Angela Kulhanek',
+      rating: 5,
+      title: 'Five Stars',
+      date: 'Reviewed in the United States on November 22, 2016',
+      format: 'Hardcover',
+      verified: false,
+      text: 'LOVED this book!! So sweet and it warms your heart! Beautiful illustrations!!',
+    },
   ]
 
   const renderStars = (rating) => {
@@ -194,7 +212,7 @@ function BookSection() {
 
             {/* Overall rating summary */}
             <div className="flex items-center gap-3 bg-ivory rounded-2xl px-5 py-3 shadow-sm border border-sage/30">
-              <span className="text-4xl font-extrabold text-charcoal">4.7</span>
+              <span className="text-4xl font-extrabold text-charcoal">4.8</span>
               <div>
                 <div className="flex items-center gap-0.5">
                   {[1, 2, 3, 4, 5].map((s) => (
@@ -215,7 +233,7 @@ function BookSection() {
             {reviews.map((review, index) => (
               <article
                 key={review.name + index}
-                className={`group bg-ivory rounded-3xl p-7 shadow-md border-t-4 border-raspberry/70 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-fadeInUp delay-${(index + 1) * 100}`}
+                className={`group bg-ivory rounded-3xl p-7 shadow-md border-t-4 border-raspberry/70 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-fadeInUp delay-${Math.min((index + 1) * 100, 900)}`}
               >
                 {/* Reviewer row */}
                 <div className="flex items-start justify-between mb-3">
